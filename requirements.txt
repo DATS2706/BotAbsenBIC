@@ -1,5 +1,5 @@
 python-telegram-bot==20.7
+Pillow
 requests
-apscheduler==3.10.4
-Pillow==10.3.0
-beautifulsoup4==4.12.3
+beautifulsoup4
+APScheduler
