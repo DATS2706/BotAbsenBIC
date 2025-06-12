@@ -453,8 +453,11 @@ async def on_startup(app):
     
     scheduler.start()
     
-    await app.bot.set_webhook(WEBHOOK_URL)
-    print(f"✅ Webhook aktif di: {WEBHOOK_URL}")
+    if USE_WEBHOOK:
+        await app.bot.set_webhook(WEBHOOK_URL)
+        print(f"✅ Webhook aktif di: {WEBHOOK_URL}")
+    else:
+        print("⚠️ Webhook tidak diset, menggunakan polling mode.")
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
